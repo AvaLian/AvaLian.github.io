@@ -1,0 +1,285 @@
+@baseColor: #555;
+@priColor:#0EB57D;
+
+// reset css
+*{
+    margin:0;padding: 0;
+    border:0;outline: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    &::before,&::after{
+        box-sizing: border-box;
+    }
+}
+ul,ol{
+    padding: 0;
+    margin:0;
+    list-style: none;
+}
+html,body{
+    font-family: 'PingFang SC','Microsoft YaHei',SimHei,Arial,SimSun;
+    background: #fafafa;
+    color:@baseColor;
+}
+.container{
+    width: 90%;
+    margin:0 auto;
+}
+.m-30{
+    margin-bottom: 30px;
+}
+//  animate
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+    transition: all .3s ease-out
+}
+// common plugin
+section{
+    margin: 0 0 60px;
+}
+.section-box{
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    padding: 40px 50px;
+
+}
+.arrow-box{
+    background: @priColor;
+    color:#fff;
+    display: inline-block;
+    position: relative;
+    padding: 7px 15px;
+    &::before{
+        position: absolute;
+        bottom: -10px;right: 0;
+        content: "";
+        width: 0;height: 0;
+        border:10px solid transparent;
+        border-left-color:@priColor;
+        transform: rotate(180deg);
+    }
+}
+.list{
+    border-top:1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    padding-top: 20px;
+    li{
+        // display: flex;
+        // padding-top: 15px;
+        i{
+            // flex:0 0 60px;
+            // width: 30px;
+            // height: 30px;
+            // border-radius: 50%;
+            // background: @priColor;
+            // color:#fff;
+            font-size: 21px;
+            color:@priColor;
+            margin-right: 10px;
+            // text-align: center;
+            // line-height: 30px;
+        }
+        span{flex:1}
+    }
+}
+.timeline{
+    li{
+        padding: 20px 0 0px 30px;
+        border-left: 2px solid #ececec;
+        font-size: 13px;
+        &:first-child{
+            padding-top: 0;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            border:2px solid @priColor;
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            margin-left: -35px;
+            margin-top: 7px;
+            border-radius: 50px;
+        }
+        h4{
+            font-size: 16px;
+        }
+        h6{font-size: 12px;margin: 3px 0 10px;font-weight: 400;}
+        p,div{color:#888;font-size: 13px;line-height: 1.5;}
+    }
+}
+.progress{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        flex: 0 0 50%;
+        padding: 0 15px;
+        .text{
+            font-size: 14px;
+            padding-right: 40px;position: relative;
+            span{
+                position: absolute;right: 0;top:0;font-size: 16px;
+            }
+        }
+        .progress-box{
+            position: relative;height: 5px;
+            background: #dfdfdf;
+            margin: 5px 0 20px;
+            overflow: hidden;
+            border-radius: 50px;
+            span{
+                display: block;height: 100%;background: @priColor;
+            }
+        }
+    }
+}
+.list-icon{
+    text-align: center;
+    li{
+        display: inline-block;
+        border:1px solid #dfdfdf;
+        margin: 7px 5px;
+        height:80px;
+        width:80px;
+        font-size: 12px;
+        color:#888;
+        line-height: 1;
+        i{
+            font-size: 30px;
+            display: block;
+            color: @priColor;
+            padding: 15px 0 5px;
+        }
+    }
+}
+.title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#scroll-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    background: #fff;
+    border:1px solid #dfdfdf;
+    color:@priColor;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);    
+    &:hover,&:active{
+        background: @priColor;
+        border-color: @priColor;
+        color:#fff;
+    }
+}
+// section
+.header{
+    position: fixed;
+    height: 60px;
+    width:100%;
+    top:0;
+    left: 0;
+    z-index: 111;
+    background: #fff;
+    padding: 0 50px;
+    transition: all 0.5s;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    .site-logo{
+        float: left; 
+        line-height: 60px;
+        color:@priColor;
+    }
+    nav{
+        float: right;
+        li{
+            position: relative;
+            line-height: 60px;
+            float: left;
+            padding: 0 10px;
+            color:#666;
+            transition: all 0.3s;
+            font-weight: 700;
+            a{
+                color:#888;
+                text-decoration: none;
+            }
+            &:hover,&:active{
+                color:@priColor;
+                background: rgba(0,0,0,0.1);
+                a{
+                    color:@priColor;
+                }
+            }
+        }
+    }
+}
+.header-visibile{
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+}
+
+.header-hidden{
+	top: -60px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#site-header{
+    background: @priColor;
+    padding-top: 60px;
+    height: 400px;
+    color:#fff;
+    font-size: 20px;
+    h2{height: 32px;font-weight: bold;margin-bottom: 15px;}
+    .text{font-size: 14px;margin-top: 20px;}
+}
+
+#about{
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    display: flex;
+    margin-top: -200px;
+    padding-bottom: 0;
+    figure{
+        background: #eee url("../images/card.jpg") no-repeat;
+        background-size: cover;
+        flex:1;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    aside{
+        flex:2;
+        padding: 30px;
+        h4{
+            font-size: 32px; color:@priColor;
+        }
+        p{
+            font-size: 18px;
+            span{
+                color:@priColor;
+            }
+        }
+        .text{
+            color:#888;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+    }
+}
+

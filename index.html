@@ -1,423 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Resumes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>小小前端设计师</title>
-    <meta name="keywords" content="小小前端设计师">
-    <meta name="description" content="">
-    <!-- css -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- owl.carousel css -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- style css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="fonts/map-icons/map-icons.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 
 <body>
-    <!-- preloader Start -->
+    <!-- Preloading -->
     <div id="preloader">
-        <div id="status">
-            <img src="images/loader.gif" id="preloader_image" alt="loader">
+        <div class="spinner">
         </div>
     </div>
-    <!--Header area start here-->
-    <div section-scroll='0' class="wd_scroll_wrap">
-        <header class="gc_main_menu_wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-6">
-                        <div class="logo-area">
-                            <a href="index.html">
-                                <!--<img src="images/logo.png" alt="logo" />-->小小前端设计师
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Mobile Menu  Start -->
-                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-6">
-                        <div class="menu-area  hidden-xs">
-                            <nav class="wd_single_index_menu btc_main_menu">
-                                <ul>
-                                    <li class="active">
-                                        <a href="0">首页</a>
-                                    </li>
-                                    <li>
-                                        <a href="1">关于我</a>
-                                    </li>
-                                    <li>
-                                        <a href="2">我的作品</a>
-                                    </li>
-                                    <li>
-                                        <a href="3">联系我</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="login-btn">
-                                <a href="#" class="btn1">
-                                    <i class="fa fa-user">产品按钮</i>
-                                    <span></span>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- mobile menu area start -->
-                        <div class="rp_mobail_menu_main_wrapper visible-xs">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div id="toggle">
-                                        <i class="glyphicon glyphicon-menu-hamburger"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="sidebar">
-                                <h1>
-                                    <a href="#">Bit Money</a>
-                                </h1>
-                                <div id="toggle_close">&times;</div>
-                                <div id='cssmenu' class="wd_single_index_menu">
-                                    <ul>
-                                        <li>
-                                            <a href="0">首页</a>
-                                        </li>
-                                        <li>
-                                            <a href="1">关于我</a>
-                                        </li>
-                                        <li>
-                                            <a href="2">我的作品</a>
-                                        </li>
-                                        <li>
-                                            <a href="3">联系我</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Mobile Menu  End -->
-                    </div>
-                </div>
-            </div>
+
+
+
+    <div id="app">
+        <!-- header -->
+        <header class="header header-hidden">
+            <h1 class="site-logo">
+                <a>陆超超</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li class="waves-effect" v-for="item in navs">
+                        <a :href="item.href">{{item.name}}</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
-        <!--Header area end here-->
-        <!--Slider area start here-->
-        <section class="slider-area">
-            <canvas>
-                <script src="js/three.js"></script>
-                <script src="js/stats.min.js"></script>
-                <script src="js/Projector.js"></script>
-                <script src="js/CanvasRenderer.js"></script>
-            </canvas>
-            <div id="particles-js">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <div class="carousel-captions caption-1">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="slider-content">
-                                                <h2 data-animation="animated bounceInLeft">标题1</h2>
-                                                <p data-animation="animated bounceInUp">具体描述信息具体描述信息具体描述信息具体</p>
-                                                <div class="buttons">
-                                                    <a href="#" class="btn1" data-animation="animated bounceInUp">button1</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="slider-content">
-                                            <h2 data-animation="animated bounceInLeft">标题2</h2>
-                                            <p data-animation="animated bounceInUp">具体描述信息具体描述信息具体描述信息具体
-                                            </p>
-                                            <div class="buttons">
-                                                <a href="#" class="btn1" data-animation="animated bounceInUp">button2</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-nevigation">
-                            <a class="prev" href="#carousel-example-generic" role="button" data-slide="prev">
-                                <i class="glyphicon glyphicon-chevron-left"></i>
-                            </a>
-                            <a class="next" href="#carousel-example-generic" role="button" data-slide="next">
-                                <i class="glyphicon glyphicon-chevron-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Slider area end here-->
-        <section class="currency-area">
-            <div class="container-fliud">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="rete-list bt_title">
-                            <div class="content">
-                                <div class="con">
-                                    <h2>
-                                        <i class="glyphicon glyphicon-euro"></i>
-                                        <span>产品1</span>
-                                    </h2>
-                                    <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                    <button class="btn3">了解更多</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rete-list bt_title">
-                            <div class="content">
-                                <div class="con">
-                                    <h2>
-                                        <i class="glyphicon glyphicon-blackboard"></i>
-                                        <span>产品2</span>
-                                    </h2>
-                                    <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                    <button class="btn3">了解更多</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rete-list bt_title">
-                            <div class="content">
-                                <div class="con">
-                                    <h2>
-                                        <i class="glyphicon glyphicon-plane"></i>
-                                        <span>产品3</span>
-                                    </h2>
-                                    <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                    <button class="btn3">了解更多</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rete-list hidden-md">
-                            <div class="content">
-                                <div class="con">
-                                    <h2>
-                                        <i class="glyphicon glyphicon-user"></i>
-                                        <span>产品4</span>
-                                    </h2>
-                                    <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                    <button class="btn3">了解更多</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!--关于我们 start here-->
-    <div section-scroll='1' class="wd_scroll_wrap">
-        <section class="about-area pd-t70 pd-b100 jarallax bg-img">
+        <!-- site header -->
+        <section id="site-header">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div class="about-content">
-                            <h2 class="f-40 fw-400">who i am?</h2>
-                            <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                            <div class="buttons">
-                                <a href="#" class="btn1">了解更多</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div class="about-img">
-                            <img src="images/about.png" alt="" />
-                        </div>
-                    </div>
-                </div>
+                <h2>I'm 陆超超</h2>
+                <p>JAVA工程师</p>
+                <p class="text">让代码变简单！让工作变轻松！</p>
             </div>
         </section>
-        <!--About area end here-->
+        <div class="container">
+            <!-- about -->
+            <section id="about">
+                <figure>
+                    <!-- <img :scr="avatar" /> -->
+                </figure>
+                <aside>
+                    <!-- <p class="arrow-box">Hello & Welcome!</p> -->
+                    <h4>陆超超</h4>
+                    <p>求职意向：
+                        <span>JAVA工程师</span>
+                    </p>
+                    <p class="text">热爱软件行业，对编程有浓厚兴趣；工作认真负责，积极，主动，待人热情、真诚。 良好的java基础知识，规范的编码风格 熟练使用spring mvc+ mybatis MVC开发框架,掌握redis、memcached等缓存技术，AJAX，Jquery等前端技术，Oracle、MySql等数据库的使用，熟悉基本linux服务器环境使用（发布及维护所发布的服务）。 善于总结知识、乐于分享，工作积极努力、勤奋踏实</p>
+                    <ul class="list timeline">
+                        <li v-for="item in aboutList">
+
+                            <i class="map-icon" :class="item.icon"></i>
+                            <span>{{item.name}}</span>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <!-- work -->
+            <section id="work">
+                <h3 class="title">
+                    <i class="map-icon map-icon-political"></i>
+                    工作经历
+                    <span></span>
+                </h3>
+                <ul class="timeline">
+                    <li v-for="item in works">
+                        <h4>{{item.title}}</h4>
+                        <h6>{{item.date}}</h6>
+                        <div v-html="item.content"></div>
+                    </li>
+                </ul>
+            </section>
+            <!-- school -->
+            <section id="school">
+                <h3 class="title">
+                    <i class="map-icon map-icon-university"></i>
+                    教育经历
+                    <span></span>
+                </h3>
+                <ul class="section-box timelne">
+                    <li>
+                        <h4>河南科技大学
+                            <span class="arrow-box" style="margin-left:10px;">本科</span>
+                        </h4>
+                        <h6 class="m-30">2006/09 -- 2010/06</h6>
+                        <p>电子信息科学与技术</p>
+                    </li>
+                </ul>
+            </section>
+            <!-- project -->
+            <section id="project">
+                <h3 class="title">
+                    <i class="map-icon map-icon-convenience-store"></i>
+                    项目经历
+                    <span></span>
+                </h3>
+                <ul class="timeline">
+                    <li v-for="item in project">
+                        <h4>{{item.title}}</h4>
+                        <h6>{{item.date}}</h6>
+                        <div v-html="item.content"></div>
+                    </li>
+                </ul>
+            </section>
+            <!-- skill -->
+            <section id="skill">
+                <h3 class="title">
+                    <i class="map-icon map-icon-jewelry-store"></i>
+                    我的技能
+                    <span></span>
+                </h3>
+                <ul class="section-box progress">
+                    <li class="progress-wrapper" v-for="item in skills">
+                        <p class="text">{{item.name}}
+                            <!-- <span>{{item.per}}</span> -->
+                        </p>
+                        <div class="progress-box">
+                            <span class="progress-bg" :style="{width:item.per}"></span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!-- hobbit -->
+            <section id="hobbit">
+                <h3 class="title">
+                    <i class="map-icon map-icon-art-gallery"></i>
+                    我的兴趣
+                    <span></span>
+                </h3>
+                <ul class="list-icon">
+                    <li v-for="item in hobbites">
+                        <i class="map-icon" :class="item.icon"></i>
+                        <span v-text="item.name"></span>
+                    </li>
+                </ul>
+            </section>
+            <!-- product -->
+            <!-- <section id="product">
+                <h3 class="title">
+                    <i class="map-icon map-icon-general-contractor"></i>
+                    我的作品
+                    <span></span>
+                </h3>
+            </section> -->
+        </div>
+        <div id="scroll-top"><i class="map-icon map-icon-airport"></i></div>
     </div>
-    <!-- 产品中心 start here-->
-    <div section-scroll='2' class="wd_scroll_wrap">
-        <section class="features-area section">
-            <div id="features-js">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="section-heading2">
-                                <h2>我的产品</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="featured-lists">
-                                <ul>
-                                    <li>
-                                        <div class="col-sm-6 pd-0 hidden-xs">
-                                            <div class="contents-l mr-b30">
-                                                <h2>风险管理平台</h2>
-                                                <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                                <a href="#" class="btn1">了解更多</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 pd-0">
-                                            <div class="imgs-l">
-                                                <figure>
-                                                    <img src="images/features/1.png" alt="" />
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 pd-0 visible-xs">
-                                            <div class="contents-l mr-b30">
-                                                <h2>风险管理平台</h2>
-                                                <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                                <a href="#" class="btn1">了解更多</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="rl">
-                                        <div class="col-sm-6 pd-0 floatright mr-b30 hidden-xs">
-                                            <div class="contents-r">
-                                                <h2>投资组合管理分析</h2>
-                                                <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                                <a href="#" class="btn1">了解更多</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 pd-0">
-                                            <div class="imgs-r">
-                                                <figure>
-                                                    <img src="images/features/2.png" alt="" />
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 pd-0 floatright mr-b30 visible-xs">
-                                            <div class="contents-r">
-                                                <h2>投资组合管理分析</h2>
-                                                <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                                <a href="#" class="btn1">了解更多</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="col-sm-6 pd-0 hidden-xs">
-                                            <div class="contents-l mr-b30">
-                                                <h2>内控系统</h2>
-                                                <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                                <a href="#" class="btn1">了解更多</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 pd-0">
-                                            <div class="imgs-l">
-                                                <figure>
-                                                    <img src="images/features/3.png" alt="" />
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 pd-0 visible-xs">
-                                            <div class="contents-l mr-b30">
-                                                <h2>内控系统</h2>
-                                                <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                                <a href="#" class="btn1">了解更多</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="rl">
-                                        <div class="col-sm-6 pd-0 floatright mr-b30 hidden-xs">
-                                            <div class="contents-r">
-                                                <h2>操作风险</h2>
-                                                <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                                <a href="#" class="btn1">了解更多</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 pd-0">
-                                            <div class="imgs-r">
-                                                <figure>
-                                                    <img src="images/features/4.png" alt="" />
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 pd-0 floatright mr-b30 visible-xs">
-                                            <div class="contents-r">
-                                                <h2>操作风险</h2>
-                                                <p>具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息具体描述信息</p>
-                                                <a href="#" class="btn1">了解更多</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- 联系我们 start here -->
-    <div section-scroll='3' class="wd_scroll_wrap">
-        <section class="footer">
-            <!--Footer area start here-->
-            <footer class="top-foo">
-                <div class="footer-top section">
-                    <div class="container">
-                        <div class="section-heading">
-                            <h2>联系我们</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="con">
-                                    <p>Tel：0571-28828888</p>
-                                    <p>Tel2：0571-28823456</p>
-                                    <p>杭州市滨江区江南大道3588号恒生大厦</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <img src="images/weixin.jpg" alt="官方微信" style="width:100px;margin-right: 20px;">
-                                <img src="images/weixin.jpg" alt="官方微博" style="width:100px;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <footer class="foo-bot">
-                <div class="footer-bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                小小前段设计师
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="copyright">
-                                    <p>© 版权所有 </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </section>
-    </div>
-    <a id="scrollUp" class="btn1" href="#top">
-        <i class="glyphicon glyphicon-chevron-up"></i>
-    </a>
-    <!-- all script -->
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <!-- js-bootstrap -->
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- owl.carousel js -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- meanmenu js -->
-    <script src="js/jquery.meanmenu.js"></script>
-    <!-- particles js -->
-    <!-- wow js -->
-    <script src="js/wow.min.js"></script>
-    <!-- smooth-scroll js -->
-    <script src="js/smooth-scroll.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <!-- all js -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        var obj = {
+            avatar: '../images/me.jpg',
+            navs: [{
+                href: "#about",
+                name: '关于我'
+            }, {
+                href: "#work",
+                name: '工作经历'
+            }, {
+                href: "#school",
+                name: '教育经历'
+            }, {
+                href: "#project",
+                name: '项目经验'
+            }, {
+                href: "#skill",
+                name: '我的技能'
+            }, {
+                href: "#hobbit",
+                name: '我的兴趣'
+            }],
+            aboutList: [{
+                icon: 'map-icon-male',
+                name: '1987.08'
+            }, {
+                icon: 'map-icon-map-pin',
+                name: '浙江省宁波市慈溪市'
+            }, {
+                icon: 'map-icon-volume-control-telephone',
+                name: '18626898799'
+            }, {
+                icon: 'map-icon-post-office',
+                name: 'lcc19870806@126.com'
+            }],
+            works: [{
+                title: '宁波舜宇光电集团',
+                date: '2017/7-至今',
+                content: '在宁波智能科技研发ifms课担任研发工程师，主导开发舜宇光电物流智能仓库项目；参与ifms智能制造项目、舜宇内部工作管理平台项目开发。'
+            }, {
+                title: '恒生电子股份有限公司',
+                date: '2014/12-2017/7',
+                content: '就职于交易所基础研发部，任Java高级工程师，主要工作为交易所各个项目的会员、支付组件开发；主要参与项目有横琴知识产权在线交易平台、武汉碳排放、上海环境能源等。'
+            }, {
+                title: '中软国际',
+                date: '2010/8-2014/12',
+                content: '就职于研发部门，任测试/研发工程师，主要以外包形式在华为、恒生等合作方从事测试开发工作，主要参与项目有华为微商城、网上app预约挂号平台。'
+            }],
+            project: [{
+                title: '宁波舜宇光电物流项目',
+                content: '智能立体仓物流项目主要用来自动化存储和配送公司产品，主要有wcs系统、物流调度系统、集团卓越系统组成，我主要负责物流调度系统这块，用到spring boot框架开发，通过webservice、http协议与wcs系统集团卓越系统对接，实现了仓库、物料等基础信息维护，下发配送任务的生成，配送计划的执行，对账业务及异常处理等功能。'
+            }, {
+                title: '横琴知识产权交易平台项目',
+                content: '横琴知交是一个大型知识产权在线交易平台，主要包含商城、会员、社区、支付等子系统；我主要负责会员子系统的开发；项目主要以springmvc+mybatis+mysql技术架构来实现，缓存技术用redis，负载均衡用nginx，会员系统主要维护会员的注册、登录（支持微信、微博等第三方登录功能）、基础信息、信用信息、权限、资金流水、社交记录等基础信息以及与其他子系统的接口交互（主要以T2接口通过路由转发来实现）。'
+            }, {
+                title: '北京301医院预约挂号项目 ',
+                content: '301预约挂号项目主要由pc端和app端组成 是一个网上预约挂号系统；我主要负责pc端web项目的开发及部分app端接口提供；web项目与301医院his系统对接来获取科室、医生、号源等基础信息；以及预约挂号、取消预约等基础功能；app端除了提供基础接口服务同时提供支付子系统的支付、退款服务服务;主要对接完成支付宝支付、建行支付、银联支付等三方支付。'
+            }],
+            skills: [{
+                name: "Oracle",
+                per: "94%"
+            }, {
+                name: "MySQL",
+                per: "90%"
+            }, {
+                name: "Spring MVC",
+                per: "94%"
+            }, {
+                name: "Mybatis",
+                per: "90%"
+            }, {
+                name: "Java",
+                per: "90%"
+            }, {
+                name: "Ajax",
+                per: "70%"
+            }, {
+                name: "JQuery",
+                per: "80%"
+            }, {
+                name: "Linux",
+                per: "70%"
+            }],
+            hobbites: [{
+                icon: 'map-icon-stadium',
+                name: '羽毛球'
+            }, {
+                icon: 'map-icon-bicycling',
+                name: '骑行'
+            }, {
+                icon: 'map-icon-fishing',
+                name: '钓鱼'
+            }, {
+                icon: 'map-icon-swimming',
+                name: '游泳'
+            }, {
+                icon: 'map-icon-airport',
+                name: '旅游'
+            }, {
+                icon: 'map-icon-point-of-interest',
+                name: '摄影'
+            }, {
+                icon: 'map-icon-climbing',
+                name: '爬山'
+            }, {
+                icon: 'map-icon-movie-theater',
+                name: '电影'
+            }]
+        }
+
+
+
+        new Vue({
+            el: '#app',
+            data: obj,
+            mounted: function () {
+                this.$nextTick(function () {
+                    // Code that will run only after the
+                    // entire view has been rendered
+                    window.onscroll = function () {
+                        initHeaderAnimation();
+                        scrollTop();
+                    }
+                    /* ---------------------------------------------
+                    Header Animation
+                    --------------------------------------------- */
+                    function initHeaderAnimation() {
+                        var scroll_top = $(document).scrollTop();
+                        if (scroll_top >= 100) {
+                            $('.header').removeClass('header-hidden');
+                            $('.header').addClass('header-visible');
+                        } else {
+                            $('.header').removeClass('header-visible');
+                            $('.header').addClass('header-hidden');
+                        }
+                    }
+                    // scorll top icon
+                    function scrollTop(){
+                        var scroll_top = $(document).scrollTop();
+                        var target = $("scroll-top")
+                        if (scroll_top >= 400) {
+                            $("#scroll-top").show();
+                        }else{
+                            $("#scroll-top").hide();
+                        }
+                    }
+                })
+            }
+        })
+
+
+        $(document).ready(function () {
+            $(".header nav li").click(function () {
+                var target = $(this).find("a").attr("href");
+                var top = $(target).offset().top;
+                $("html, body").animate({
+                    scrollTop: top
+                }, { duration: 500, easing: "swing" });
+                return false;
+            });
+
+            $(".site-logo,#scroll-top").click(function(){
+                $("html, body").animate({
+                    scrollTop: 0
+                }, { duration: 500, easing: "swing" });
+                $("#scroll-top").hide();
+            })
+            
+        });
+    </script>
+
 </body>
 
 </html>
