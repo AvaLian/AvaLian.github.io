@@ -14,6 +14,7 @@
     <!-- Preloading -->
     <div id="preloader">
         <div class="spinner">
+            <img src="images/loading.gif" alt="加载中。。。" />
         </div>
     </div>
 
@@ -304,6 +305,11 @@
                     }
                 })
             }
+        })
+
+        $(window).on('load',function(){
+            $(".spinner").fadeOut();
+            $("#preloader").delay(350).fadeOut('slow');
         })
 
 

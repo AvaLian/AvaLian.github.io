@@ -41,6 +41,22 @@ body {
   will-change: opacity, transform;
   transition: all 0.3s ease-out;
 }
+#preloader {
+  background-color: #FFF;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 10000000000;
+  top: 0px;
+}
+.spinner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  top: 50%;
+  left: 50%;
+}
 section {
   margin: 0 0 60px;
 }
